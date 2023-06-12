@@ -10,3 +10,7 @@
 .my-carousel .carousel-item img {
     object-fit: cover;
 }
+
+#my_size{
+    width: 1040px;
+}

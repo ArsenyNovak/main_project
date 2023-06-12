@@ -1,1 +1,15 @@
 {% extends 'base.html' %}
+{% block content %}
+{% for item in news %}
+  <section class="card mb-3">
+    <div class="card">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <p class="card-text">{{ item.content|linebreaks|truncatewords:50 }}</p>
+        <a href="{{ item.get_absolute_url }}" class="btn btn-primary">Read more</a>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+{% endblock %}
